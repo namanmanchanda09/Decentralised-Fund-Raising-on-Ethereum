@@ -14,6 +14,21 @@ It is to implement a decentralised application on Ethereum Network using blockch
 
 ![screenshot 2018-10-26 at 6 29 40 pm](https://user-images.githubusercontent.com/35381035/47567874-4188e580-d94d-11e8-8b67-5981f56cd773.png)
 
+https://prezi.com/view/VZswVEf91m6nBgau8zj7/
+
+
+### Tools required
+#### Metamask
+#### node package manager
+
+### How to run
+#### Clone the repository
+#### On terminal >>> npm install (install the dependencies)
+#### On terminal >>> npm run start
+#### Connect Metamask to the Rinkeby Test Network
+
+
+
 
 
 
