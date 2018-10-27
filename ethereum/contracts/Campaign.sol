@@ -34,14 +34,14 @@ contract Campaign {
         _;
     }
 
-    mapping(address => bool) public futureRequest;
+    mapping(address => string) public futureRequest;
 
     function Campaign(uint minimum, address creator) public {
         manager = creator;
         minimumContribution = minimum;
     }
 
-    function contribute(bool ask) public payable {
+    function contribute(string ask) public payable {
         require(msg.value > minimumContribution);
         approvers[msg.sender] = true;
         approversCount++;

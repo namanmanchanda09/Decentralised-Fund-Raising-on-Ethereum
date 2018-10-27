@@ -9,7 +9,7 @@ class ContributeForm extends Component {
     value: '',
     errorMessage: '',
     loading: false,
-    checkValue: 'accept'
+    checkValue: 'true'
   };
 
   onSubmit = async event => {
@@ -54,8 +54,8 @@ class ContributeForm extends Component {
           <Radio
             label='Accept'
             name='radioGroup'
-            value='this'
-            checked={this.state.checkValue === 'accept'}
+            value='true'
+            checked={this.state.checkValue === 'true'}
             onChange={this.handleChange}
           />
         </Form.Field>
@@ -63,9 +63,9 @@ class ContributeForm extends Component {
           <Radio
             label='Reject'
             name='radioGroup'
-            value='that'
-            onClick={()=>this.setState({checkValue: 'reject'})}
-            checked={this.state.checkValue === 'reject'}
+            value='false'
+            onClick={()=>this.setState({checkValue: 'false'})}
+            checked={this.state.checkValue === 'false'}
           />
         </Form.Field>
         <Message error header="Oops!" content={this.state.errorMessage} />

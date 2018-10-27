@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Input, Message } from 'semantic-ui-react';
+import { Form, Button, Input, Message, Modal, Header, Icon } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
 import factory from '../../ethereum/factory';
 import web3 from '../../ethereum/web3';
@@ -9,8 +9,13 @@ class CampaignNew extends Component {
   state = {
     minimumContribution: '',
     errorMessage: '',
-    loading: false
+    loading: false,
+    modalOpen: false
   };
+
+  handleClose = () => this.setState({ modalOpen: false });
+  
+  handleOpen = () => this.setState({ modalOpen: true })
 
   onSubmit = async event => {
     event.preventDefault();
@@ -25,12 +30,11 @@ class CampaignNew extends Component {
           from: accounts[0]
         });
 
-      Router.pushRoute('/');
     } catch (err) {
       this.setState({ errorMessage: err.message });
     }
 
-    this.setState({ loading: false });
+    this.setState({ loading: false, modalOpen: true });
   };
 
   render() {
@@ -55,6 +59,22 @@ class CampaignNew extends Component {
             Create!
           </Button>
         </Form>
+        <Modal
+        open={this.state.modalOpen}
+        onClose={this.handleClose}
+        basic
+        size='small'
+        >
+          <Header icon='browser' content='Cookies policy' />
+          <Modal.Content>
+            <h3>Campaign Has Been Successfully Created</h3>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button color='green' onClick={this.handleClose} inverted>
+              <Icon name='checkmark' /> Got it
+            </Button>
+          </Modal.Actions>
+        </Modal>
       </Layout>
     );
   }
