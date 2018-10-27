@@ -11,26 +11,26 @@
   </head>
   <body>
 
-    <div class="ui container">
-      <div class="ui equal width grid">
-        <div class="column">
-          <h1 class="header">Startup Page</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Startup Page</h1>
           <hr/>
-          <br>
+          <br/>
         </div>
       </div>
-    </div>
 
-    <div class="ui container">
-      <div class="ui centered card">
-        <div style="text-align:center;" class="content">
-          <a href="./fundraiser.html"><button class="ui blue button">Create a Campaign</button></a>
+      <form style="width:50%;margin:5% auto;">
+        <div class="form-group">
+          <label for="campaign_name">Name</label>
+          <input type="email" class="form-control" id="campaign_name" aria-describedby="emailHelp" placeholder="Enter Name">
         </div>
-        <div style="text-align:center;" class="extra content">
-          <a href="./contribute.html"><button class="ui blue button">Contribute</button></a>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea rows="8" type="Description" class="form-control" id="description" placeholder="Description"></textarea>
         </div>
-      </div>
-    </div>    
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

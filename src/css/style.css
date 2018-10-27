@@ -1,8 +1,11 @@
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+.btn-container > a{
+	display: inline;
+}
 
-    text-decoration: none;
-    color: initial;
+.btn-container {
+	text-align: center
+}
+
+.header {
+	text-align: center;
 }

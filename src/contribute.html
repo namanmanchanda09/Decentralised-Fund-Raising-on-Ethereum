@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Startup Page</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+  </head>
+  <body>
+
+    <div class="ui container">
+      <div class="ui equal width grid">
+        <div class="column">
+          <h1 class="header">Startup Page</h1>
+          <hr/>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="ui one column stackable center aligned page grid">
+       <div class="column twelve wide">
+           <div class="ui search">
+              <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Search campaigns...">
+                <i class="search icon"></i>
+              </div>
+              <div class="results"></div>
+            </div>
+       </div>
+    </div>
+      <div class="ui card centered">
+          <div class="content">
+            <div class="header">
+              Self Driving Card
+            </div>
+            <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptas tempora cupiditate exercitationem possimus ad corporis hic molestias enim, quibusdam illo natus nobis nesciunt, deserunt nemo modi, libero. Quidem, accusantium.
+            </div>
+            <div class="meta">Min Value: 5 ether</div>
+          </div>
+        <div class="ui button">
+        <button class="ui green button">
+          Contribute
+        </button>
+      </div>
+      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+    <script>
+        var content = [
+          { title: 'Andorra' },
+          { title: 'United Arab Emirates' },
+          { title: 'Afghanistan' },
+          { title: 'Antigua' },
+          { title: 'Anguilla' },
+          { title: 'Albania' },
+          { title: 'Armenia' },
+          { title: 'Netherlands Antilles' },
+          { title: 'Angola' },
+          { title: 'Argentina' },
+          { title: 'American Samoa' },
+          { title: 'Austria' },
+          { title: 'Australia' },
+          { title: 'Aruba' },
+          { title: 'Aland Islands' },
+          { title: 'Azerbaijan' },
+          { title: 'Bosnia' },
+          { title: 'Barbados' },
+          { title: 'Bangladesh' },
+          { title: 'Belgium' },
+          { title: 'Burkina Faso' },
+          { title: 'Bulgaria' },
+          { title: 'Bahrain' },
+          { title: 'Burundi' }
+          // etc
+        ];
+      $('.ui.search')
+        .search({
+          source: content
+        });
+    </script>
+  </body>
+</html>
