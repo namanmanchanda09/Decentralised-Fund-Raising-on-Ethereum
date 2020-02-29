@@ -19,8 +19,8 @@ Link to the presentation       https://prezi.com/view/VZswVEf91m6nBgau8zj7/
 
 
 ### Tools required
- ##### Metamask
- ##### node package manager
+ 1. Metamask
+ 2. node package manager
 
 ### How to run
  ##### Clone the repository
